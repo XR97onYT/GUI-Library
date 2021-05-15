@@ -320,7 +320,7 @@ function Library:CreateWindow(name)
 	Contain.BorderColor3 = Color3.fromRGB(27, 42, 53)
 	Contain.BorderSizePixel = 0
 	Contain.Position = UDim2.new(-8.87655034e-08, 0, 0.118348733, 0)
-	Contain.Size = UDim2.new(0, 171, 0, 272)
+	Contain.Size = UDim2.new(1, 0, 0.882, 0)
 	Contain.CanvasSize = UDim2.new(0, 0, 0, 0)
 	Contain.ScrollBarThickness = 9
 	Contain.ZIndex = 16
@@ -332,7 +332,7 @@ function Library:CreateWindow(name)
 	TabTemplate_2.Parent = TabMenu
 	TabTemplate_2.BackgroundColor3 = Color3.fromRGB(65, 65, 65)
 	TabTemplate_2.BorderSizePixel = 0
-	TabTemplate_2.Size = UDim2.new(0, 171, 0, 25)
+	TabTemplate_2.Size = UDim2.new(1, 0, 0.15, 0)
 	TabTemplate_2.SizeConstraint = Enum.SizeConstraint.RelativeXX
 	TabTemplate_2.Visible = false
 	TabTemplate_2.Font = Enum.Font.SourceSansBold

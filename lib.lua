@@ -87,7 +87,7 @@ function Library:CreateWindow(name)
 	MainUI.Parent = UILibrary
 	MainUI.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
 	MainUI.Position = UDim2.new(0.172999993, 0, 0.180000007, 0)
-	MainUI.Size = UDim2.new(0.65200001, 0, 0.637000024, 0)
+	MainUI.Size = UDim2.new(0.1625, 0, 0.159, 0)
 	MainUI.ZIndex = 5
 	MainUI.ClipsDescendants = true
 
@@ -534,27 +534,5 @@ function Library:CreateWindow(name)
 		
 	return Functions
 end
-
-local XD = Library:CreateWindow("HY")
-local TAB = XD:CreateTab("tab")
-local Check = TAB:CreateTextbox("Enter Speed")
-TAB:CreateCheckbox({
-	["Text"] = "Wow do u want to press this button?",
-	["Functions"] = {
-		["On"] = function() print("yeah i think it works") end,
-		["Off"] = function() print("oh no its off") end
-	}
-})
-Check.FocusLost:Connect(function(enterpressed)
-	if enterpressed then print(Check.Text) end
-end)
-TAB:CreateSeparator("What SEPARATING ME FROM MY BROTHERS?? NOOO")
-TAB:CreateTextbox("Yes thats exactly what")
-TAB:CreateTextbox("Yes thats exactly what")
-TAB:CreateTextbox("Yes thats exactly what")
-TAB:CreateTextbox("Yes thats exactly what")
-TAB:CreateTextbox("Yes thats exactly what")
-
-local TAB2 = XD:CreateTab("what theeee.e......e.e..e.e.e")
 
 return Library

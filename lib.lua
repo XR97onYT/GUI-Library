@@ -381,7 +381,9 @@ function Library:CreateWindow(name)
 				if Data["Text"] and Data["Functions"] then
 					if type(Data["Functions"]) == "table" then
 						if Data["Functions"]["On"] and Data["Functions"]["Off"] then
-							dataIsValid = true
+							if type(Data["Functions"]["On"] == "function") and type(Data["Functions"]["Off"] == "function") then
+								dataIsValid = true
+							end
 						end
 					end
 				end

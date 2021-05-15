@@ -355,7 +355,7 @@ function Library:CreateWindow(name)
 		newTab.Visible = false
 		
 		local Button = TabTemplate_2:Clone()
-		Button.Text = "Tab" .. tostring(Library.Windows)
+		Button.Text = tostring(Name) or "Tab" .. tostring(#Library.Windows)
 		Button.Visible = true
 		Button.Parent = TabMenu.Contain
 		Button.MouseButton1Click:Connect(function()

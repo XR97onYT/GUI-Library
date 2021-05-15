@@ -87,7 +87,7 @@ function Library:CreateWindow(name)
 	MainUI.Parent = UILibrary
 	MainUI.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
 	MainUI.Position = UDim2.new(0.172999993, 0, 0.180000007, 0)
-	MainUI.Size = UDim2.new(0.1625, 0, 0.159, 0)
+	MainUI.Size = UDim2.new(0.46, 0, 0.4, 0)
 	MainUI.ZIndex = 5
 	MainUI.ClipsDescendants = true
 

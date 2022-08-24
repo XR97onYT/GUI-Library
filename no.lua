@@ -1,4 +1,4 @@
-local RandomLag = math.random(4,8)
+local RandomLag = 15
 
 local MT = getrawmetatable(game)
 local OriginalNamecall = MT.__namecall
@@ -15,7 +15,7 @@ MT.__namecall = newcclosure(function(self, ...)
 	if tostring(NCM) == "FireServer" then
 		if tostring(self) == "UpdatePing" then
 			Arguments[1] = RandomLag
-			RandomLag = math.random(4,8)
+			RandomLag = 15
 			return OriginalNamecall(self, unpack(Arguments))
 		end
 	end

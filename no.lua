@@ -1785,6 +1785,7 @@ end
 local q,x = pcall(function()
 
 local RandomLag = 70
+local cCount = 0
 local MT = getrawmetatable(game)
 local OriginalNamecall = MT.__namecall
 
@@ -1802,11 +1803,13 @@ MT.__namecall = newcclosure(function(self, ...)
 		if not checkcaller() and tostring(self) == "UpdatePing" then
 		   if type(Arguments[1]) == "string" then
 			local randomNumberMyAss = math.random(350,511)
+			if cCount == 5 then randomNumberMyAss = math.random(24,97) cCount = 0 end
 		        local XonaeTheNigger = bitBuffer();
         		XonaeTheNigger.writeUnsigned(64, game.Players.LocalPlayer.UserId);
         		XonaeTheNigger.writeUnsigned(9, randomNumberMyAss);
         		Arguments[1] = XonaeTheNigger.dumpString()
 			if Arguments[2] then Arguments[2] = nil end
+			cCount += 1
         		return OriginalNamecall(self, unpack(Arguments))
 		   end
 		end

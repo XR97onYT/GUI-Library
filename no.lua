@@ -1786,6 +1786,7 @@ local q,x = pcall(function()
 
 local RandomLag = 70
 local cCount = 0
+		local XonaeTheNigger = require(game.ReplicatedStorage.Events.Modules.BitBuffer)()
 local MT = getrawmetatable(game)
 local OriginalNamecall = MT.__namecall
 
@@ -1804,7 +1805,7 @@ MT.__namecall = newcclosure(function(self, ...)
 		   if type(Arguments[1]) == "string" then
 			local randomNumberMyAss = math.random(100,300)
 			if cCount >= 5 then randomNumberMyAss = math.random(24,97) if cCount > 6 then cCount = 0 end end
-		        local XonaeTheNigger = require(game.ReplicatedStorage.Events.Modules.BitBuffer)();
+		        
         		XonaeTheNigger.writeUnsigned(64, game.Players.LocalPlayer.UserId);
         		XonaeTheNigger.writeUnsigned(9, randomNumberMyAss);
         		local A1 = XonaeTheNigger.dumpString()

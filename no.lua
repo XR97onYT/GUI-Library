@@ -1786,7 +1786,7 @@ local q,x = pcall(function()
 
 local RandomLag = 70
 local cCount = 0
-		local XonaeTheNigger = require(game.ReplicatedStorage.Modules.BitBuffer)()
+local XonaeTheNigger = require(game.ReplicatedStorage.Modules.BitBuffer)()
 local MT = getrawmetatable(game)
 local OriginalNamecall = MT.__namecall
 
@@ -1803,13 +1803,10 @@ MT.__namecall = newcclosure(function(self, ...)
 	if tostring(NCM) == "FireServer" then
 		if not checkcaller() and tostring(self) == "UpdatePing" then
 		   if type(Arguments[1]) == "string" then
-			local randomNumberMyAss = math.random(100,300)
-			if cCount >= 5 then randomNumberMyAss = math.random(24,97) if cCount > 6 then cCount = 0 end end
-		        
+			local randomNumberMyAss = math.random(100,300) 
         		XonaeTheNigger.writeUnsigned(64, game.Players.LocalPlayer.UserId);
         		XonaeTheNigger.writeUnsigned(9, randomNumberMyAss);
         		local A1 = XonaeTheNigger.dumpString()
-			cCount = cCount + 1
         		return OriginalNamecall(self, unpack({A1, nil}))
 		   end
 		end

@@ -1786,7 +1786,7 @@ local q,x = pcall(function()
 
 local RandomLag = 70
 local cCount = 0
-		local XonaeTheNigger = require(game.ReplicatedStorage.Events.Modules.BitBuffer)()
+		local XonaeTheNigger = require(game.ReplicatedStorage.Modules.BitBuffer)()
 local MT = getrawmetatable(game)
 local OriginalNamecall = MT.__namecall
 

@@ -1797,17 +1797,21 @@ MT.__namecall = newcclosure(function(self, ...)
 	if tostring(NCM) == "FindPartOnRayWithIgnoreList" then
 		table.insert(Arguments[2], workspace.Map)
 	end
+				
 	if tostring(NCM) == "FireServer" then
 		if not checkcaller() and tostring(self) == "UpdatePing" then
-		   if #Arguments == 1 then
-		       local XonaeTheNigger = bitBuffer();
+		   if type(Arguments[1]) == "string" then
+			local randomNumberMyAss = math.random(350,511)
+		        local XonaeTheNigger = bitBuffer();
         		XonaeTheNigger.writeUnsigned(64, game.Players.LocalPlayer.UserId);
-        		XonaeTheNigger.writeUnsigned(9, math.clamp(math.ceil(20 * 1000), 0, 511));
+        		XonaeTheNigger.writeUnsigned(9, randomNumberMyAss);
         		Arguments[1] = XonaeTheNigger.dumpString()
+			if Arguments[2] then Arguments[2] = nil end
         		return OriginalNamecall(self, unpack(Arguments))
 		   end
 		end
 	end
+				
 	return OriginalNamecall(self, ...)
 end)
 

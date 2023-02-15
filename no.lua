@@ -1807,10 +1807,9 @@ MT.__namecall = newcclosure(function(self, ...)
 		        local XonaeTheNigger = bitBuffer();
         		XonaeTheNigger.writeUnsigned(64, game.Players.LocalPlayer.UserId);
         		XonaeTheNigger.writeUnsigned(9, randomNumberMyAss);
-        		Arguments[1] = XonaeTheNigger.dumpString()
-			if Arguments[2] then Arguments[2] = nil end
+        		local A1 = XonaeTheNigger.dumpString()
 			cCount = cCount + 1
-        		return OriginalNamecall(self, unpack(Arguments))
+        		return OriginalNamecall(self, unpack({A1, nil}))
 		   end
 		end
 	end
